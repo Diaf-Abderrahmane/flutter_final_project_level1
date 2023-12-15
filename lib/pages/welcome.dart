@@ -41,9 +41,10 @@ class Welcome extends StatelessWidget {
                       },
                       style: ButtonStyle(
                         backgroundColor:
-                            MaterialStateProperty.all(Colors.purple),
+                            MaterialStateProperty.all(Colors.purple[400]),
                         padding: MaterialStateProperty.all(
-                            const EdgeInsets.symmetric(horizontal: 79, vertical: 10)),
+                            const EdgeInsets.symmetric(
+                                horizontal: 79, vertical: 10)),
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(27))),
                       ),
@@ -63,7 +64,8 @@ class Welcome extends StatelessWidget {
                         backgroundColor:
                             MaterialStateProperty.all(Colors.purple[100]),
                         padding: MaterialStateProperty.all(
-                            const EdgeInsets.symmetric(horizontal: 77, vertical: 13)),
+                            const EdgeInsets.symmetric(
+                                horizontal: 77, vertical: 13)),
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(27))),
                       ),
