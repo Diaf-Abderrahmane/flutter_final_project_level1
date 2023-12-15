@@ -93,24 +93,53 @@ class Signup extends StatelessWidget {
                                     fontSize: 18, color: Colors.white),
                               )),
                         ),
-                        Text(
-                          "Already have an account ? Login in",
-                          style: TextStyle(color: Colors.black54),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pushNamed(context, "/login");
+                          },
+                          child: Text(
+                            "Already have an account ? Login in",
+                            style: TextStyle(color: Colors.black54),
+                          ),
                         ),
                         SizedBox(
-                          height: 15,
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                                child: Divider(
+                                    thickness: 1, color: Colors.purple)),
+                            Container(
+                                margin: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                                child: Text("OR")),
+                            Expanded(
+                                child: Divider(
+                              thickness: 1,
+                              color: Colors.purple,
+                            ))
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Container(
-                                padding: EdgeInsets.all(10),
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(100),
-                                    border: Border.all(
-                                        color: Colors.purple, width: 1)),
-                                child: SvgPicture.asset(
-                                    "assets/icons/facebook.svg")),
+                              padding: EdgeInsets.all(10),
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(100),
+                                  border: Border.all(
+                                      color: Colors.purple, width: 1)),
+                              child: SvgPicture.asset(
+                                "assets/icons/facebook.svg",
+                                color: Colors.purple,
+                              ),
+                            ),
                             Container(
                                 padding: EdgeInsets.all(10),
                                 decoration: BoxDecoration(
@@ -120,6 +149,7 @@ class Signup extends StatelessWidget {
                                 child: SvgPicture.asset(
                                   "assets/icons/twitter.svg",
                                   width: 24,
+                                  color: Colors.purple,
                                 )),
                             Container(
                                 padding: EdgeInsets.all(10),
@@ -130,6 +160,7 @@ class Signup extends StatelessWidget {
                                 child: SvgPicture.asset(
                                   "assets/icons/google-plus.svg",
                                   width: 24,
+                                  color: Colors.purple,
                                 )),
                           ],
                         )

@@ -93,9 +93,14 @@ class Login extends StatelessWidget {
                                     fontSize: 18, color: Colors.white),
                               )),
                         ),
-                        Text(
-                          "Don't have an account ? Sign up",
-                          style: TextStyle(color: Colors.black54),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pushNamed(context, "/signup");
+                          },
+                          child: Text(
+                            "Don't have an account ? Sign up",
+                            style: TextStyle(color: Colors.black54),
+                          ),
                         )
                       ],
                     ),
